@@ -5,7 +5,9 @@ I also ran into an issue in my first attempt where I had to create another insta
 with more RAM to run this. Also ran into issues with 2GB VM during mysql install.
 - sudo dnf install httpd
 - sudo systemctl enable httpd + sudo systemctl start httpd
--sudo dnf install all the php modules (I didn’t do php-gd the first time around but had no issues with php)
+-sudo dnf install all the php modules (I believe this is where I actually ran into errors on my first try. 
+I got through almost everything without any apparent issues, but when it came to visiting the wordpress link there were similar 
+errors to your video and it turns out I didn't have all the necessary php modules)
 - navigate to /var/www/html and create info.php file (sudo nano info.php)
 - in /etc/httpd/conf.d/php.conf, add index.php to DirectoryIndex list
 - Add browser detector file to index.php
